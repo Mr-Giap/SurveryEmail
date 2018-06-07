@@ -1,0 +1,5 @@
+c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.dll
+c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
+c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache
+c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
+c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
