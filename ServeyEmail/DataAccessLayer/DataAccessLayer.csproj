@@ -56,6 +56,11 @@
     <Compile Include="BaseDAL\BaseRole.cs" />
     <Compile Include="BaseDAL\BaseStatus.cs" />
     <Compile Include="BaseDAL\BaseUser.cs" />
+    <Compile Include="DAL\GroupDAL.cs" />
+    <Compile Include="DAL\HistoryDAL.cs" />
+    <Compile Include="DAL\RoleDAL.cs" />
+    <Compile Include="DAL\StatusDAL.cs" />
+    <Compile Include="DAL\UserDAL.cs" />
     <Compile Include="Model\Group.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -141,9 +146,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ValueObjects\ValueObjects.csproj">
       <Project>{c4b5c916-f091-46de-9083-c65ae65717ca}</Project>
