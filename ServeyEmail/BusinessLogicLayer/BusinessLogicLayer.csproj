@@ -45,15 +45,12 @@
     <Compile Include="BaseBLL\BaseRole.cs" />
     <Compile Include="BaseBLL\BaseStatus.cs" />
     <Compile Include="BaseBLL\BaseUser.cs" />
-    <Compile Include="BLL\GroupBLL.cs" />
-    <Compile Include="BLL\HistoryBLL.cs" />
-    <Compile Include="BLL\RoleBLL.cs" />
-    <Compile Include="BLL\StatusBLL.cs" />
-    <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BLL\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{859cb294-be2b-419a-b1c8-beae9f5e9ee1}</Project>
