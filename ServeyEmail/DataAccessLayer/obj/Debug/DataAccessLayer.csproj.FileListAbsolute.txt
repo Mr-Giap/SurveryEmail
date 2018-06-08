@@ -10,3 +10,15 @@ c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\b
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.dll
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.dll
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.pdb
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.xml
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
