@@ -1,0 +1,12 @@
+
+ServeyEmail/BusinessLogicLayer/BLL/GroupBLL.cs
+ServeyEmail/BusinessLogicLayer/BLL/RoleBLL.cs
+ServeyEmail/BusinessLogicLayer/BLL/StatusBLL.cs
+ServeyEmail/BusinessLogicLayer/BLL/HistoryBLL.cs
+ServeyEmail/BusinessLogicLayer/BLL/UserBLL.cs
+ServeyEmail/.vs/ServeyEmail/v14/.suo
+ServeyEmail/ValueObjects/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.csproj
+*.cache
+ServeyEmail/BusinessLogicLayer/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+ServeyEmail/.vs/ServeyEmail/v14/.suo
