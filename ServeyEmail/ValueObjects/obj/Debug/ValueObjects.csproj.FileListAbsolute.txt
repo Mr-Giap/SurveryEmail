@@ -3,3 +3,8 @@ c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\bin\
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
+A:\Git\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.dll
+A:\Git\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
+A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache
+A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
+A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
