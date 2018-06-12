@@ -34,3 +34,15 @@ A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFra
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

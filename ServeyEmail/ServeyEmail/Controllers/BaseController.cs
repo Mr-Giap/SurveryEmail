@@ -23,14 +23,8 @@ namespace ServeyEmail.Controllers
                             action = "Login"
                         }));
             }
-<<<<<<< HEAD
 
             base.OnActionExecuting(filterContext);
         }
-=======
-            base.OnActionExecuting(filterContext);
-        }
-
->>>>>>> Hue
     }
 }
