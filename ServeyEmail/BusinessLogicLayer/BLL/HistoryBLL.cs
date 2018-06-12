@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using BusinessLogicLayer.BaseBLL;
 using DataAccessLayer.DAL;
 using ValueObjects;
+using System.Collections;
 
 namespace BusinessLogicLayer.BLL
 {
-    class HistoryBLL : BaseHistory<OHistories>
+    public class HistoryBLL : BaseHistory<OHistories>
     {
         HistoryDAL ht = new HistoryDAL();
         public override List<OHistories> Getall()
@@ -28,5 +29,10 @@ namespace BusinessLogicLayer.BLL
         {
             return ht.Update(his);
         }
+        public override List<OHistories> Checkdate(DateTime date)
+        {
+            return ht.Checkdate(date);
+        }
+
     }
 }

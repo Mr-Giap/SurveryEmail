@@ -8,3 +8,8 @@ A:\Git\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
 A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache
 A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
 A:\Git\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache

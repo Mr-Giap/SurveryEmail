@@ -9,7 +9,7 @@ using ValueObjects;
 
 namespace BusinessLogicLayer.BLL
 {
-    class StatusBLL : BaseStatus<OStatus>
+    public class StatusBLL : BaseStatus<OStatus>
     {
         StatusDAL stt = new StatusDAL();
         public override List<OStatus> Getall()
@@ -27,6 +27,10 @@ namespace BusinessLogicLayer.BLL
         public override bool Rename(OStatus status)
         {
             return stt.Rename(status);
+        }
+        public override string Getname(int status)
+        {
+            return stt.Getname(status);
         }
 
     }

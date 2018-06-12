@@ -12,5 +12,6 @@ namespace DataAccessLayer.BaseDAL
         public virtual bool Insert(T his) { return false; }
         public virtual bool Update(T his) { return false; }
         public virtual bool Delete(T his) { return false; }
+        public virtual List<T> Checkdate(DateTime date) { List<T> list = new List<T>(); return list; }
     }
 }

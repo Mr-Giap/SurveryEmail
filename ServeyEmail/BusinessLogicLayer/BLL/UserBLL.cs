@@ -9,7 +9,7 @@ using ValueObjects;
 
 namespace BusinessLogicLayer.BLL
 {
-    class UserBLL : BaseUser<OUsers>
+    public class UserBLL : BaseUser<OUsers>
     {
         UserDAL abc = new UserDAL();
         public override List<OUsers> GetallUsers()

@@ -22,3 +22,15 @@ A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlSer
 A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 A:\Git\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

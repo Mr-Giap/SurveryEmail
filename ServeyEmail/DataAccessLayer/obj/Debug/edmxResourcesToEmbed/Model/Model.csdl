@@ -251,6 +251,12 @@
       <Parameter Name="Id" Mode="In" Type="Guid" />
       <Parameter Name="idrole" Mode="In" Type="Int32" />
     </FunctionImport>
+    <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
+      <Parameter Name="ids" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Group_Select_All_Result">
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
@@ -304,5 +310,9 @@
     <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
     <Property Type="Int32" Name="IdRole" Nullable="false" />
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="History_Checkdate_Result">
+    <Property Type="Int32" Name="Amount" Nullable="true" />
+    <Property Type="Int32" Name="IdStatus" Nullable="false" />
   </ComplexType>
 </Schema>

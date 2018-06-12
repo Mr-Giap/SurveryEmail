@@ -70,6 +70,9 @@
     <Compile Include="Model\History.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\History_Checkdate_Result.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\History_Select_All_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

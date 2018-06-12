@@ -44,5 +44,11 @@ namespace DataAccessLayer.DAL
             db.Status_Delete(status.IdStatus);
             return true;
         }
+        public override string Getname(int idstatus)
+        {
+            string t;
+            t = db.Status_Getname(idstatus).ToString();
+            return t;
+        }
     }
 }

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "ChartView";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="~/Scripts/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+        function jsonThongKeTheoStt(handleData) {
+            $.ajax({
+                url: "/Chart/GetJsonData",
+                //data: JSON.stringify(dto),
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function (result) {
+                        handleData(result);
+                },
+                error: function (errormessage) {
+                    alert(errormessage.responseText);
+                }
+            });
+            return false;
+        }
+    </script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1", { packages: ["corechart"] });
+        var sttname = [];
+        var sttamount = [];
+        var datas;
+        function drawChart() {
+            // tao Bang
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'name');
+            data.addColumn('number', 'amount');
+            data.addRows(sttname.length);
+            for (var i = 0; i > sttname.length; i++) {
+                data.setCell(i, 0, sttname[i] + '(' + sttamount[i] + ' )');
+                data.setCell(i, 1, parseInt(sttamount[i]));
+            }
+            var options = {
+                'title': 'Thống kê số lượng trạng thái',
+                is3D: true
+            };
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+           
+        }
+        jsonThongKeTheoStt(function (data) {
+            $.each(data, function (i, item) {
+                sttname.push([item.name]);
+                sttamount.push([item.amount]);
+            });
+            google.setOnLoadCallback(drawChart);
+        });
+
+
+        
+
+
+    </script>
+        
+
+
+
+
+</head>
+<body>
+
+
+
+
+</body>
+
+</html>
+

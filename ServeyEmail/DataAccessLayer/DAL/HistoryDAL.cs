@@ -47,5 +47,19 @@ namespace DataAccessLayer.DAL
             db.History_Delete(his.IdHis);
             return true;
         }
+        public override List<OHistories> Checkdate(DateTime date)
+        {
+            List<OHistories> list = new List<OHistories>();
+           var List = db.History_Checkdate(date);
+            foreach(var item in List)
+            {
+                OHistories a = new OHistories();
+                a.IdStatus = item.IdStatus;
+                a.Amount = item.Amount;
+                list.Add(a);
+            }
+
+            return list;
+        }
     }
 }

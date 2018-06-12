@@ -20,3 +20,14 @@ A:\Git\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\EntityFramework.xml
 A:\Git\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
 A:\Git\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 A:\Git\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\ValueObjects.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\EntityFramework.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\ValueObjects.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\EntityFramework.xml
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb

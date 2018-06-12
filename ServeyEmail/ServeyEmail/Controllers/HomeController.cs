@@ -26,5 +26,20 @@ namespace ServeyEmail.Controllers
 
             return View();
         }
+        public ActionResult Getdata()
+        {
+            Ratio q = new Ratio();
+            q.a = 30;
+            q.b = 49;
+            q.c = 50;
+            return Json(q, JsonRequestBehavior.AllowGet);
+
+        }
+        public class Ratio
+        {
+            public int a { get; set; }
+            public int b { get; set; }
+            public int c { get; set; }
+        }
     }
 }

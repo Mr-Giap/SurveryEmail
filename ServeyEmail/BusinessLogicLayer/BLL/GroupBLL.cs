@@ -9,7 +9,7 @@ using ValueObjects;
 
 namespace BusinessLogicLayer.BLL
 {
-    class GroupBLL:BaseGroup<OGroups>
+   public class GroupBLL:BaseGroup<OGroups>
     {
         GroupDAL gr = new GroupDAL();
         public override List<OGroups> Getall()
