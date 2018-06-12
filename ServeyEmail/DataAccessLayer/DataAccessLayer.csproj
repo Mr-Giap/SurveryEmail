@@ -61,6 +61,7 @@
     <Compile Include="DAL\RoleDAL.cs" />
     <Compile Include="DAL\StatusDAL.cs" />
     <Compile Include="DAL\UserDAL.cs" />
+    <Compile Include="EncrypCODE.cs" />
     <Compile Include="Model\Group.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

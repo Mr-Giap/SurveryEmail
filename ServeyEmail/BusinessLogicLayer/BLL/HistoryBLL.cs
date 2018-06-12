@@ -9,7 +9,7 @@ using ValueObjects;
 
 namespace BusinessLogicLayer.BLL
 {
-    class HistoryBLL : BaseHistory<OHistories>
+    public class HistoryBLL : BaseHistory<OHistories>
     {
         HistoryDAL ht = new HistoryDAL();
         public override List<OHistories> Getall()

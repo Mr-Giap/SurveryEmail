@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,8 +24,8 @@ namespace ServeyEmail.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
             return View();
         }
+        
     }
 }

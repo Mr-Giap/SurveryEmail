@@ -10,5 +10,6 @@ namespace ValueObjects
     {
         public static string SESSION_ACCOUNT = "SESSION_ACCOUNT";
         public static String SESSION_USER = "SESSION_USER";
+        public static string KEY_MD5 = "SENDMAIL";
     }
 }

@@ -14,6 +14,12 @@ namespace ServeyEmail
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Recive Email",
+                url: "{ReciveEmail}/{code}/{number}/{date}",
+                defaults: new { controller = "ReciveEmail", action = "Index", code = UrlParameter.Optional, number = UrlParameter.Optional, date = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

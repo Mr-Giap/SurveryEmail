@@ -9,7 +9,7 @@ using ValueObjects;
 
 namespace BusinessLogicLayer.BLL
 {
-    class RoleBLL : BaseRole<ORules>
+    public class RoleBLL : BaseRole<ORules>
     {
         RoleDAL rule = new RoleDAL();
         public override List<ORules> Getall()

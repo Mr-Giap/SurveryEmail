@@ -13,5 +13,6 @@ namespace ValueObjects
         public int IdStatus { get; set; }
         public Guid IdGroup { get; set; }
         public int? Amount { get; set; }
+        public List<OUsers> listuser { get; set; }
     }
 }
