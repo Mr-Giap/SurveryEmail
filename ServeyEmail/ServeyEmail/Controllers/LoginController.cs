@@ -18,8 +18,6 @@ namespace ServeyEmail.Controllers
         [HttpPost]
         public ActionResult Index(OUsers user)
         {
-            
-            
             return View();
         }
     }

@@ -4,13 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="26e0dc72eb8746f4809538da94b8668c" Name="Diagram1">
+      <Diagram DiagramId="d52ee7516e3740598c414e22ff0378d1" Name="Diagram1">
         <EntityTypeShape EntityType="StatusSurveyModel.Group" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="StatusSurveyModel.History" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="StatusSurveyModel.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="StatusSurveyModel.Status" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="StatusSurveyModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="StatusSurveyModel.Users" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="StatusSurveyModel.User" Width="1.5" PointX="6" PointY="3" IsExpanded="true" />
         <AssociationConnector Association="StatusSurveyModel.FK_History_Group" ManuallyRouted="false" />
         <AssociationConnector Association="StatusSurveyModel.FK_Users_Group" ManuallyRouted="false" />
         <AssociationConnector Association="StatusSurveyModel.FK_History_Status" ManuallyRouted="false" />

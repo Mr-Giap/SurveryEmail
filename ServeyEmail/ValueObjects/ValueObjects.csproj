@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommonConstant.cs" />
     <Compile Include="OGroups.cs" />
     <Compile Include="OHistories.cs" />
     <Compile Include="ORules.cs" />

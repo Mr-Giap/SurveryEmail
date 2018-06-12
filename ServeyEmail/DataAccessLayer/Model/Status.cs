@@ -17,13 +17,13 @@ namespace DataAccessLayer.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Status()
         {
-            this.History = new HashSet<History>();
+            this.Histories = new HashSet<History>();
         }
     
         public int IdStatus { get; set; }
         public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<History> History { get; set; }
+        public virtual ICollection<History> Histories { get; set; }
     }
 }

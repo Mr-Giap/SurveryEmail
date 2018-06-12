@@ -10,3 +10,15 @@ c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\b
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.dll
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.dll
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\ValueObjects.pdb
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.xml
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

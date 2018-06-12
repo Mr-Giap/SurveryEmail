@@ -17,8 +17,8 @@ namespace DataAccessLayer.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Group()
         {
-            this.History = new HashSet<History>();
-            this.Users = new HashSet<Users>();
+            this.Histories = new HashSet<History>();
+            this.Users = new HashSet<User>();
         }
     
         public System.Guid IdGroup { get; set; }
@@ -26,8 +26,8 @@ namespace DataAccessLayer.Model
         public string Contents { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<History> History { get; set; }
+        public virtual ICollection<History> Histories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Users> Users { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

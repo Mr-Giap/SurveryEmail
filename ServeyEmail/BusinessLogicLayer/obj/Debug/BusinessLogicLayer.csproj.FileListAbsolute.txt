@@ -9,3 +9,14 @@ c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\BusinessLogicLaye
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
 c:\users\shj\documents\visual studio 2015\Projects\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.dll
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\BusinessLogicLayer.pdb
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\DataAccessLayer.dll
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\ValueObjects.dll
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\EntityFramework.dll
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\DataAccessLayer.pdb
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\ValueObjects.pdb
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Debug\EntityFramework.xml
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.dll
+F:\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Debug\BusinessLogicLayer.pdb
