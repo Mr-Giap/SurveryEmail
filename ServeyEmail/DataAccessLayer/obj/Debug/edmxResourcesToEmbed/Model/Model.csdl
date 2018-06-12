@@ -7,7 +7,7 @@
     <Property Name="IdGroup" Type="Guid" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Contents" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="History" Relationship="Self.FK_History_Group" FromRole="Group" ToRole="History" />
+    <NavigationProperty Name="Histories" Relationship="Self.FK_History_Group" FromRole="Group" ToRole="History" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Users_Group" FromRole="Group" ToRole="Users" />
   </EntityType>
   <EntityType Name="History">
@@ -36,19 +36,9 @@
     </Key>
     <Property Name="IdStatus" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="History" Relationship="Self.FK_History_Status" FromRole="Status" ToRole="History" />
+    <NavigationProperty Name="Histories" Relationship="Self.FK_History_Status" FromRole="Status" ToRole="History" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="Users">
+  <EntityType Name="User">
     <Key>
       <PropertyRef Name="IdUser" />
     </Key>
@@ -78,7 +68,7 @@
   </Association>
   <Association Name="FK_Users_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="1" />
-    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Group">
         <PropertyRef Name="IdGroup" />
@@ -102,7 +92,7 @@
   </Association>
   <Association Name="FK_Users_Role">
     <End Role="Role" Type="Self.Role" Multiplicity="1" />
-    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <End Role="Users" Type="Self.User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Role">
         <PropertyRef Name="IdRole" />
@@ -113,26 +103,25 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="StatusSurveyEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Group" EntityType="Self.Group" />
-    <EntitySet Name="History" EntityType="Self.History" />
-    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="Groups" EntityType="Self.Group" />
+    <EntitySet Name="Histories" EntityType="Self.History" />
+    <EntitySet Name="Roles" EntityType="Self.Role" />
     <EntitySet Name="Status" EntityType="Self.Status" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="Users" EntityType="Self.User" />
     <AssociationSet Name="FK_History_Group" Association="Self.FK_History_Group">
-      <End Role="Group" EntitySet="Group" />
-      <End Role="History" EntitySet="History" />
+      <End Role="Group" EntitySet="Groups" />
+      <End Role="History" EntitySet="Histories" />
     </AssociationSet>
     <AssociationSet Name="FK_Users_Group" Association="Self.FK_Users_Group">
-      <End Role="Group" EntitySet="Group" />
+      <End Role="Group" EntitySet="Groups" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
     <AssociationSet Name="FK_History_Status" Association="Self.FK_History_Status">
       <End Role="Status" EntitySet="Status" />
-      <End Role="History" EntitySet="History" />
+      <End Role="History" EntitySet="Histories" />
     </AssociationSet>
     <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
-      <End Role="Role" EntitySet="Role" />
+      <End Role="Role" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
     </AssociationSet>
     <FunctionImport Name="Group_Delete">
@@ -174,36 +163,6 @@
       <Parameter Name="id" Mode="In" Type="Int32" />
       <Parameter Name="name" Mode="In" Type="String" />
     </FunctionImport>
-    <FunctionImport Name="sp_alterdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_creatediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="version" Mode="In" Type="Int32" />
-      <Parameter Name="definition" Mode="In" Type="Binary" />
-    </FunctionImport>
-    <FunctionImport Name="sp_dropdiagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(StatusSurveyModel.sp_helpdiagramdefinition_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(StatusSurveyModel.sp_helpdiagrams_Result)">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="sp_renamediagram">
-      <Parameter Name="diagramname" Mode="In" Type="String" />
-      <Parameter Name="owner_id" Mode="In" Type="Int32" />
-      <Parameter Name="new_diagramname" Mode="In" Type="String" />
-    </FunctionImport>
-    <FunctionImport Name="sp_upgraddiagrams" />
     <FunctionImport Name="Status_Delete">
       <Parameter Name="id" Mode="In" Type="Int32" />
     </FunctionImport>
@@ -267,17 +226,6 @@
   <ComplexType Name="Role_Select_All_Result">
     <Property Type="Int32" Name="IdRole" Nullable="false" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagramdefinition_Result">
-    <Property Type="Int32" Name="version" Nullable="true" />
-    <Property Type="Binary" Name="definition" Nullable="true" />
-  </ComplexType>
-  <ComplexType Name="sp_helpdiagrams_Result">
-    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
-    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
-    <Property Type="Int32" Name="ID" Nullable="false" />
-    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
-    <Property Type="Int32" Name="OwnerID" Nullable="false" />
   </ComplexType>
   <ComplexType Name="Status_Select_All_Result">
     <Property Type="Int32" Name="IdStatus" Nullable="false" />

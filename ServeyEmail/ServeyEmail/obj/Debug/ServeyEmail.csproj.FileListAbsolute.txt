@@ -121,6 +121,8 @@ A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.csprojResolveA
 A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
 A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.csprojResolveAssemblyReference.cache
+F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.dll
+F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.pdb
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb
 A:\Git\SurveryEmail\SurveryEmail\ServeyEmail\ServeyEmail\bin\ApplicationInsights.config
