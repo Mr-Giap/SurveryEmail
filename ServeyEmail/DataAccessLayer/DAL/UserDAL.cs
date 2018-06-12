@@ -17,11 +17,7 @@ namespace DataAccessLayer.DAL
         }
         public override OUsers Checklogin(OUsers user)
         {
-<<<<<<< HEAD
             OUsers nu = new OUsers();
-=======
-            OUsers nu = null;
->>>>>>> Hue
             var checkuser = db.User_Checklogin(user.UserName, user.Password).FirstOrDefault();
             nu.IdUser = checkuser.IdUser;
             nu.UserName = checkuser.UserName;
