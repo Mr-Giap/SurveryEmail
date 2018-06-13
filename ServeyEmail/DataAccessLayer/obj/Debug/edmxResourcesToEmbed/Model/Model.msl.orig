@@ -182,6 +182,7 @@
     <FunctionImportMapping FunctionImportName="User_Update_Informatiom_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Informatiom_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Password_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Password_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Permission" FunctionName="StatusSurveyModel.Store.User_Update_Permission" />
+<<<<<<< HEAD
     <FunctionImportMapping FunctionImportName="User_Update_Sendmail" FunctionName="StatusSurveyModel.Store.User_Update_Sendmail" />
     <FunctionImportMapping FunctionImportName="User_getall_by_Sendmail" FunctionName="StatusSurveyModel.Store.User_getall_by_Sendmail">
       <ResultMapping>
@@ -199,6 +200,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+=======
     <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
       <ResultMapping>
         <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
@@ -208,5 +210,6 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
+>>>>>>> Hue
   </EntityContainerMapping>
 </Mapping>

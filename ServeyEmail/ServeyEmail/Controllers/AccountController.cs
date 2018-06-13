@@ -9,7 +9,6 @@ namespace ServeyEmail.Controllers
 {
     public class AccountController : Controller
     {
-         
         // GET: Logins
         [HttpGet]
         public ActionResult Login()
@@ -22,12 +21,12 @@ namespace ServeyEmail.Controllers
             OUsers u = new OUsers();
             UserBLL userBLL = new UserBLL();
             u = userBLL.Checklogin(user);
-            if(u==null)
+            if (u.UserName == null)
             {
+                ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng.");
                 return View();
             }
-            Session.Add(CommonConstant.SESSION_ACCOUNT,u);
-            ViewBag.UserName = u.UserName;
+            Session.Add(CommonConstant.SESSION_ACCOUNT, u);
             return RedirectToAction("Index", "Home");
         }
         public ActionResult Logout()
@@ -43,22 +42,21 @@ namespace ServeyEmail.Controllers
             ViewBag.listGr = listGr;
             RoleBLL roleBLL = new RoleBLL();
             SelectList listRole = new SelectList(roleBLL.Getall(), "IdRole", "Name");
-            ViewBag.listRole = listRole;
+            ViewBag.listRole = listRole.Where(p => p.Value == "2").First().Text;
             return View();
         }
         [HttpPost]
         public ActionResult Register(OUsers user)
         {
-            UserBLL userBLL = new UserBLL();
-            if(userBLL.Insert(user))
+            UserBLL userBLL = new UserBLL();      
+            user.IdUser = Guid.NewGuid();
+            user.IdRole = 2;
+            if (userBLL.Insert(user))
             {
-                return RedirectToAction("Success", "Account");
+                return RedirectToAction("Login", "Account");
             }
-            return View();
-        }
-        public ActionResult RegisterSuccess()
-        {
-            return View();
+
+            return View(user);
         }
     }
 }

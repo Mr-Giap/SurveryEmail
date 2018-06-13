@@ -18,6 +18,20 @@ namespace DataAccessLayer.DAL
         public override OUsers Checklogin(OUsers user)
         {
             OUsers nu = new OUsers();
+<<<<<<< HEAD
+            var checkuser = db.User_Checklogin(user.UserName, user.Password).FirstOrDefault();
+            nu.IdUser = checkuser.IdUser;
+            nu.UserName = checkuser.UserName;
+            nu.Password = checkuser.Password;
+            nu.FullName = checkuser.FullName;
+            nu.Address = checkuser.Address;
+            nu.Phone = checkuser.Phone;
+            nu.Email = checkuser.Email;
+            nu.IdRole = checkuser.IdRole;
+            nu.IdGroup = checkuser.IdGroup;
+            nu.Checkmail = (bool)checkuser.CheckEmail;
+            return nu;
+=======
             var checkuser = db.User_Checklogin(user.UserName, Encryptor.MD5Hash(user.Password)).FirstOrDefault();            
             if (checkuser!=null)
             {
@@ -35,6 +49,7 @@ namespace DataAccessLayer.DAL
             else {
                 return nu;
             }
+>>>>>>> Hue
         }
         public override List<OUsers> GetallUsers()
         {
@@ -76,7 +91,8 @@ namespace DataAccessLayer.DAL
         {
             db.User_Delete(user.IdUser);
             return true;
-        }        
+<<<<<<< HEAD
+        }
         public override bool Updatecheckmail(OUsers user,int trangthai)
         {
             db.User_Update_Sendmail(user.IdUser,trangthai);
@@ -103,5 +119,8 @@ namespace DataAccessLayer.DAL
             }
             return listuser;
         }
+=======
+        }        
+>>>>>>> Hue
     }
 }

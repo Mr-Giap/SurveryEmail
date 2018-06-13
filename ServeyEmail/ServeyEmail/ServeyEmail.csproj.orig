@@ -168,21 +168,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-<<<<<<< HEAD
     <Compile Include="Areas\AdminCP\AdminCPAreaRegistration.cs" />
-    <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ReciveEmailController.cs" />
-=======
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\ReciveEmailController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+=======
 >>>>>>> Hue
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Encystor.cs" />
     <Compile Include="Models\SendEmailDaily.cs" />
     <Compile Include="Models\SetUpScheduler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -234,14 +231,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\ReciveEmail\Index.cshtml" />
-=======
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\RegisterSuccess.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
->>>>>>> Hue
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

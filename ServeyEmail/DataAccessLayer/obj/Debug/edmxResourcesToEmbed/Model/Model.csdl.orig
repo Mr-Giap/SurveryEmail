@@ -257,13 +257,14 @@
       <Parameter Name="Id" Mode="In" Type="Guid" />
       <Parameter Name="idrole" Mode="In" Type="Int32" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="User_Update_Sendmail">
       <Parameter Name="id" Mode="In" Type="Guid" />
       <Parameter Name="check" Mode="In" Type="Int32" />
     </FunctionImport>
     <FunctionImport Name="User_getall_by_Sendmail" ReturnType="Collection(StatusSurveyModel.User_getall_by_Sendmail_Result)">
       <Parameter Name="check" Mode="In" Type="Int32" />
-    </FunctionImport>
+=======
     <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
       <Parameter Name="date" Mode="In" Type="DateTime" />
     </FunctionImport>
@@ -272,6 +273,7 @@
     </FunctionImport>
     <FunctionImport Name="User_GetName" ReturnType="Collection(String)">
       <Parameter Name="Id" Mode="In" Type="Guid" />
+>>>>>>> Hue
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Group_Select_All_Result">
