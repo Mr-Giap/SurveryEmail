@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="StatusSurveyModelStoreContainer" CdmEntityContainer="StatusSurveyEntities">
-    <EntitySetMapping Name="Group">
+    <EntitySetMapping Name="Groups">
       <EntityTypeMapping TypeName="StatusSurveyModel.Group">
         <MappingFragment StoreEntitySet="Group">
           <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
@@ -10,7 +10,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="History">
+    <EntitySetMapping Name="Histories">
       <EntityTypeMapping TypeName="StatusSurveyModel.History">
         <MappingFragment StoreEntitySet="History">
           <ScalarProperty Name="IdHis" ColumnName="IdHis" />
@@ -21,7 +21,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Role">
+    <EntitySetMapping Name="Roles">
       <EntityTypeMapping TypeName="StatusSurveyModel.Role">
         <MappingFragment StoreEntitySet="Role">
           <ScalarProperty Name="IdRole" ColumnName="IdRole" />
@@ -38,7 +38,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="StatusSurveyModel.sysdiagrams">
+      <EntityTypeMapping TypeName="StatusSurveyModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -49,7 +49,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="StatusSurveyModel.Users">
+      <EntityTypeMapping TypeName="StatusSurveyModel.User">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="IdUser" ColumnName="IdUser" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -60,6 +60,7 @@
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="IdRole" ColumnName="IdRole" />
           <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -75,6 +76,14 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="Group_Update" FunctionName="StatusSurveyModel.Store.Group_Update" />
+    <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="History_Delete" FunctionName="StatusSurveyModel.Store.History_Delete" />
     <FunctionImportMapping FunctionImportName="History_Insert" FunctionName="StatusSurveyModel.Store.History_Insert" />
     <FunctionImportMapping FunctionImportName="History_Select_All" FunctionName="StatusSurveyModel.Store.History_Select_All">
@@ -125,6 +134,7 @@
     <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StatusSurveyModel.Store.sp_renamediagram" />
     <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StatusSurveyModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="Status_Delete" FunctionName="StatusSurveyModel.Store.Status_Delete" />
+    <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
     <FunctionImportMapping FunctionImportName="Status_Insert" FunctionName="StatusSurveyModel.Store.Status_Insert" />
     <FunctionImportMapping FunctionImportName="Status_Rename" FunctionName="StatusSurveyModel.Store.Status_Rename" />
     <FunctionImportMapping FunctionImportName="Status_Select_All" FunctionName="StatusSurveyModel.Store.Status_Select_All">
@@ -147,6 +157,7 @@
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="IdRole" ColumnName="IdRole" />
           <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
@@ -164,11 +175,29 @@
           <ScalarProperty Name="Phone" ColumnName="Phone" />
           <ScalarProperty Name="IdRole" ColumnName="IdRole" />
           <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="User_Update_Informatiom_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Informatiom_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Password_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Password_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Permission" FunctionName="StatusSurveyModel.Store.User_Update_Permission" />
+    <FunctionImportMapping FunctionImportName="User_Update_Sendmail" FunctionName="StatusSurveyModel.Store.User_Update_Sendmail" />
+    <FunctionImportMapping FunctionImportName="User_getall_by_Sendmail" FunctionName="StatusSurveyModel.Store.User_getall_by_Sendmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.User_getall_by_Sendmail_Result">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

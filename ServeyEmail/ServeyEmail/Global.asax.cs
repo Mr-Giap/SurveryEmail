@@ -15,9 +15,10 @@ namespace ServeyEmail
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            SetUpScheduler.start();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            SetUpScheduler.start();
+            
         }
     }
 }

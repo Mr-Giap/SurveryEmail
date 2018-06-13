@@ -28,6 +28,7 @@ namespace DataAccessLayer.DAL
             nu.Email = checkuser.Email;
             nu.IdRole = checkuser.IdRole;
             nu.IdGroup = checkuser.IdGroup;
+            nu.Checkmail = (bool)checkuser.CheckEmail;
             return nu;
         }
         public override List<OUsers> GetallUsers()
@@ -46,6 +47,7 @@ namespace DataAccessLayer.DAL
                 user.Email = item.Email;
                 user.IdRole = item.IdRole;
                 user.IdGroup = item.IdGroup;
+                user.Checkmail = (bool)item.CheckEmail;
                 listuser.Add(user);
             }
             return listuser;
@@ -62,13 +64,39 @@ namespace DataAccessLayer.DAL
         }
         public override bool Update_Password(OUsers user)
         {
-            db.User_Update_Password_Normal(user.IdUser, user.Password, user.IdRole);
+            db.User_Update_Password_Normal(user.IdUser, user.Password);
             return true;
         }
         public override bool Delete(OUsers user)
         {
             db.User_Delete(user.IdUser);
             return true;
+        }
+        public override bool Updatecheckmail(OUsers user,int trangthai)
+        {
+            db.User_Update_Sendmail(user.IdUser,trangthai);
+            return true;
+        }
+        public override List<OUsers> GetallBycheck(int trangthai)
+        {
+            List<OUsers> listuser = new List<OUsers>();
+            var list = db.User_getall_by_Sendmail(trangthai);
+            foreach (var item in list)
+            {
+                OUsers user = new OUsers();
+                user.IdUser = item.IdUser;
+                user.UserName = item.UserName;
+                user.Password = item.Password;
+                user.FullName = item.FullName;
+                user.Address = item.Address;
+                user.Phone = item.Phone;
+                user.Email = item.Email;
+                user.IdRole = item.IdRole;
+                user.IdGroup = item.IdGroup;
+                user.Checkmail = (bool)item.CheckEmail;
+                listuser.Add(user);
+            }
+            return listuser;
         }
     }
 }

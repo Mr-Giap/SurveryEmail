@@ -60,7 +60,6 @@
     <Compile Include="BLL\RoleBLL.cs" />
     <Compile Include="BLL\StatusBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
-    <Compile Include="EncryptCode.cs" />
     <Compile Include="MAHOA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

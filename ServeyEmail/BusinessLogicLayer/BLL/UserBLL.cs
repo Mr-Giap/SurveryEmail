@@ -36,5 +36,14 @@ namespace BusinessLogicLayer.BLL
         {
             return abc.Update_Password(user);
         }
+        public override bool Updatecheckmail(OUsers user, int trangthai)
+        {
+            return abc.Updatecheckmail(user, trangthai);
+        }
+        public override List<OUsers> GetallBycheck(int trangthai)
+        {
+            return abc.GetallBycheck(trangthai);
+
+        }
     }
 }

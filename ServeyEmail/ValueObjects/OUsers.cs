@@ -11,9 +11,9 @@ namespace ValueObjects
     {
         [Display(Name = "ID người dùng")]
         public Guid IdUser { get; set; }
-
-        [Required]
+                
         [Display(Name = "Tên đăng nhập")]
+        [Required(ErrorMessage = "Vui lòng nhập dữ liệu cho trường này.")]
         public string UserName { get; set; }
 
         [Required]
@@ -28,18 +28,21 @@ namespace ValueObjects
         public string ConfirmPassword { get; set; }
 
         [Display(Name = "Họ và Tên")]
+        [Required(ErrorMessage = "Vui lòng nhập dữ liệu cho trường này.")]
         public string FullName { get; set; }
 
         [Display(Name = "Địa chỉ")]
+        [Required(ErrorMessage = "Vui lòng nhập dữ liệu cho trường này.")]
         public string Address { get; set; }
-
-        [Required]
+        
         [EmailAddress]
         [Display(Name = "Email")]
+        [Required(ErrorMessage = "Vui lòng nhập dữ liệu cho trường này.")]
         public string Email { get; set; }
 
         [Phone]
         [Display(Name = "Số điện thoại")]
+        [Required(ErrorMessage = "Vui lòng nhập dữ liệu cho trường này.")]
         public string Phone { get; set; }
 
         [Required]
@@ -52,5 +55,6 @@ namespace ValueObjects
 
         [Display(Name = "Nhớ tài khoản")]
         public bool RememberMe { get; set; }
+        public bool Checkmail { get; set; }
     }
 }

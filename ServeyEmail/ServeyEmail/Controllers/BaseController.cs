@@ -19,7 +19,7 @@ namespace ServeyEmail.Controllers
                 filterContext.Result = new RedirectToRouteResult(new
                         RouteValueDictionary(new
                         {
-                            controller = "Logins",
+                            controller = "Account",
                             action = "Login"
                         }));
             }

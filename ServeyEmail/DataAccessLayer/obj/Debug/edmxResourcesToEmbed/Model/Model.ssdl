@@ -55,6 +55,7 @@
     <Property Name="Phone" Type="varchar" MaxLength="50" />
     <Property Name="IdRole" Type="int" Nullable="false" />
     <Property Name="IdGroup" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CheckEmail" Type="bit" />
   </EntityType>
   <Association Name="FK_History_Group">
     <End Role="Group" Type="Self.Group" Multiplicity="1" />
@@ -119,6 +120,9 @@
     <Parameter Name="name" Type="nvarchar" Mode="In" />
     <Parameter Name="content" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="History_Checkdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime" Mode="In" />
+  </Function>
   <Function Name="History_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhis" Type="uniqueidentifier" Mode="In" />
   </Function>
@@ -177,6 +181,9 @@
   <Function Name="Status_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
   </Function>
+  <Function Name="Status_Getname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ids" Type="int" Mode="In" />
+  </Function>
   <Function Name="Status_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="Name" Type="nvarchar" Mode="In" />
@@ -192,6 +199,9 @@
   </Function>
   <Function Name="User_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="User_getall_by_Sendmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="check" Type="int" Mode="In" />
   </Function>
   <Function Name="User_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
@@ -215,11 +225,14 @@
   <Function Name="User_Update_Password_Normal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
     <Parameter Name="pass" Type="varchar" Mode="In" />
-    <Parameter Name="idrole" Type="int" Mode="In" />
   </Function>
   <Function Name="User_Update_Permission" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="Id" Type="uniqueidentifier" Mode="In" />
     <Parameter Name="idrole" Type="int" Mode="In" />
+  </Function>
+  <Function Name="User_Update_Sendmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="check" Type="int" Mode="In" />
   </Function>
   <EntityContainer Name="StatusSurveyModelStoreContainer">
     <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />

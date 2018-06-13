@@ -45,6 +45,5 @@ namespace DataAccessLayer.DAL
         {
             db.Group_Delete(group.IdGroup);
             return true;
-        }
-    }
+        }    }
 }

@@ -41,7 +41,9 @@ namespace ServeyEmail.Controllers
             GroupBLL grBLL = new GroupBLL();
             SelectList listGr = new SelectList(grBLL.Getall(), "IdGroup", "Name");
             ViewBag.listGr = listGr;
-
+            RoleBLL roleBLL = new RoleBLL();
+            SelectList listRole = new SelectList(roleBLL.Getall(), "IdRole", "Name");
+            ViewBag.listRole = listRole;
             return View();
         }
         [HttpPost]

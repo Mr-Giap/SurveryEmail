@@ -14,24 +14,22 @@ namespace ServeyEmail.Models
             IScheduler scheduler = StdSchedulerFactory.GetDefaultScheduler();
 
             scheduler.Start();
-
-
-
+            // khởi tạo 1 sẽ làm việc sendemaildaily
             IJobDetail job = JobBuilder.Create<SendEmailDaily>().Build();
 
 
-
+            //thêm trigger
             ITrigger trigger = TriggerBuilder.Create()
 
                 .WithDailyTimeIntervalSchedule
 
                   (s =>
 
-                     s.WithIntervalInHours(24)
+                     s.WithIntervalInHours(24) // việc sẽ làm sau 24h
 
-                    .OnEveryDay()
+                    .OnEveryDay() // vào mỗi ngày
 
-                    .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(13,55))
+                    .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(14,17)) //bắt đầu lúc 14:17
 
                   )
 
@@ -39,7 +37,7 @@ namespace ServeyEmail.Models
 
 
 
-            scheduler.ScheduleJob(job, trigger);
+            scheduler.ScheduleJob(job, trigger); //set việc
         }
     }
 }

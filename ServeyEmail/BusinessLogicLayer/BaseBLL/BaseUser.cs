@@ -14,6 +14,7 @@ namespace BusinessLogicLayer.BaseBLL
         public virtual bool Update_Information(T user) { return false; }
         public virtual bool Update_Password(T user) { return false; }
         public virtual bool Delete(T user) { return false; }
-
+        public virtual bool Updatecheckmail(T user, int trangthai) { return false; }
+        public virtual List<T> GetallBycheck(int trangthai) { List<T> Listuser = new List<T>(); return Listuser; }
     }
 }

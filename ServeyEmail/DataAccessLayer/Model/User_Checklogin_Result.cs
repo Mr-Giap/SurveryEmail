@@ -22,5 +22,6 @@ namespace DataAccessLayer.Model
         public string Phone { get; set; }
         public int IdRole { get; set; }
         public System.Guid IdGroup { get; set; }
+        public Nullable<bool> CheckEmail { get; set; }
     }
 }

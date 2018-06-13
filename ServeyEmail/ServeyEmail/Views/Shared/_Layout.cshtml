@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using ValueObjects
+@model ValueObjects.OUsers
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,6 +25,20 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (Session["SESSION_ACCOUNT"] != null)
+                    {
+                        <li><a href="@Url.Action("Logout","Account")">Logout</a></li>
+                    }
+                    else
+                    {
+                        @*<li><a href="@Url.Action("Login","Account")">Login</a></li>*@
+                        <li>@Html.ActionLink("Login","Login","Account")</li>
+                        
+                        @*<li><a href="@Url.Action("Register","Account")">Register</a></li>*@
+                        <li>@Html.ActionLink("Register", "Register","Account")</li>
+                    }
                 </ul>
             </div>
         </div>
