@@ -108,6 +108,9 @@
     <Parameter Name="name" Type="nvarchar" Mode="In" />
     <Parameter Name="content" Type="nvarchar" Mode="In" />
   </Function>
+  <Function Name="History_Checkdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="date" Type="datetime" Mode="In" />
+  </Function>
   <Function Name="History_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhis" Type="uniqueidentifier" Mode="In" />
   </Function>
@@ -135,6 +138,9 @@
   </Function>
   <Function Name="Status_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Status_Getname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ids" Type="int" Mode="In" />
   </Function>
   <Function Name="Status_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />

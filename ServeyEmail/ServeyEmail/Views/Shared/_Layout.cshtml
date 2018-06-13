@@ -27,15 +27,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    @if (Session["SESSION_ACCOUNT"] != null)
-                    {
-                        <li><a href="@Url.Action("Logout","Account")">Logout</a></li>
-                    }
-                    else
-                    {
-                        <li><a href="@Url.Action("Login","Account")">Login</a></li>
-                        <li><a href="@Url.Action("Register","Account")">Register</a></li>
-                    }
+                   @Html.Partial("_LoginPartial")
                 </ul>
             </div>
         </div>

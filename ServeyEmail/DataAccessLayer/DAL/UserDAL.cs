@@ -18,17 +18,23 @@ namespace DataAccessLayer.DAL
         public override OUsers Checklogin(OUsers user)
         {
             OUsers nu = new OUsers();
-            var checkuser = db.User_Checklogin(user.UserName, user.Password).FirstOrDefault();
-            nu.IdUser = checkuser.IdUser;
-            nu.UserName = checkuser.UserName;
-            nu.Password = checkuser.Password;
-            nu.FullName = checkuser.FullName;
-            nu.Address = checkuser.Address;
-            nu.Phone = checkuser.Phone;
-            nu.Email = checkuser.Email;
-            nu.IdRole = checkuser.IdRole;
-            nu.IdGroup = checkuser.IdGroup;
-            return nu;
+            var checkuser = db.User_Checklogin(user.UserName, Encryptor.MD5Hash(user.Password)).FirstOrDefault();            
+            if (checkuser!=null)
+            {
+                nu.IdUser = checkuser.IdUser;
+                nu.UserName = checkuser.UserName;
+                nu.Password = checkuser.Password;
+                nu.FullName = checkuser.FullName;
+                nu.Address = checkuser.Address;
+                nu.Phone = checkuser.Phone;
+                nu.Email = checkuser.Email;
+                nu.IdRole = checkuser.IdRole;
+                nu.IdGroup = checkuser.IdGroup;
+                return nu;
+            }
+            else {
+                return nu;
+            }
         }
         public override List<OUsers> GetallUsers()
         {
@@ -52,7 +58,7 @@ namespace DataAccessLayer.DAL
         }
         public override bool Insert(OUsers user)
         {
-            db.User_Insert(user.IdUser, user.UserName, user.Password, user.FullName, user.Address, user.Email, user.Phone, user.IdRole, user.IdGroup);
+            db.User_Insert(user.IdUser, user.UserName, Encryptor.MD5Hash(user.Password), user.FullName, user.Address, user.Email, user.Phone, user.IdRole, user.IdGroup);
             return true;
         }
         public override bool Update_Information(OUsers user)
@@ -69,6 +75,6 @@ namespace DataAccessLayer.DAL
         {
             db.User_Delete(user.IdUser);
             return true;
-        }
+        }        
     }
 }

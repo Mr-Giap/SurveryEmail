@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StatusSurveyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StatusSurveyModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Group">
           <Key>
             <PropertyRef Name="IdGroup" />
@@ -113,6 +113,9 @@
           <Parameter Name="name" Type="nvarchar" Mode="In" />
           <Parameter Name="content" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="History_Checkdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="date" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="History_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhis" Type="uniqueidentifier" Mode="In" />
         </Function>
@@ -140,6 +143,9 @@
         </Function>
         <Function Name="Status_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="Status_Getname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ids" Type="int" Mode="In" />
         </Function>
         <Function Name="Status_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
@@ -208,8 +214,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StatusSurveyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -338,7 +343,7 @@
             <End Role="Users" EntitySet="Users" />
           </AssociationSet>
           <FunctionImport Name="Group_Delete">
-            <Parameter Name="id" Mode="In" Type="Guid" />
+          <Parameter Name="id" Mode="In" Type="Guid" />
           </FunctionImport>
           <FunctionImport Name="Group_Insert">
             <Parameter Name="id" Mode="In" Type="Guid" />
@@ -352,7 +357,7 @@
             <Parameter Name="content" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="History_Delete">
-            <Parameter Name="idhis" Mode="In" Type="Guid" />
+          <Parameter Name="idhis" Mode="In" Type="Guid" />
           </FunctionImport>
           <FunctionImport Name="History_Insert">
             <Parameter Name="idhis" Mode="In" Type="Guid" />
@@ -362,10 +367,10 @@
           </FunctionImport>
           <FunctionImport Name="History_Select_All" ReturnType="Collection(StatusSurveyModel.History_Select_All_Result)" />
           <FunctionImport Name="History_Update">
-            <Parameter Name="idhis" Mode="In" Type="Guid" />
+          <Parameter Name="idhis" Mode="In" Type="Guid" />
           </FunctionImport>
           <FunctionImport Name="Role_Delete">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="Role_Insert">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -377,7 +382,7 @@
             <Parameter Name="name" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Status_Delete">
-            <Parameter Name="id" Mode="In" Type="Int32" />
+          <Parameter Name="id" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="Status_Insert">
             <Parameter Name="id" Mode="In" Type="Int32" />
@@ -393,7 +398,7 @@
             <Parameter Name="password" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="User_Delete">
-            <Parameter Name="Id" Mode="In" Type="Guid" />
+          <Parameter Name="Id" Mode="In" Type="Guid" />
           </FunctionImport>
           <FunctionImport Name="User_Insert">
             <Parameter Name="Id" Mode="In" Type="Guid" />
@@ -422,6 +427,15 @@
           <FunctionImport Name="User_Update_Permission">
             <Parameter Name="Id" Mode="In" Type="Guid" />
             <Parameter Name="idrole" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
+          <Parameter Name="date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
+          <Parameter Name="ids" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="User_GetName" ReturnType="Collection(String)">
+            <Parameter Name="Id" Mode="In" Type="Guid" />
           </FunctionImport>
         </EntityContainer>
         <ComplexType Name="Group_Select_All_Result">
@@ -465,6 +479,10 @@
           <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
           <Property Type="Int32" Name="IdRole" Nullable="false" />
           <Property Type="Guid" Name="IdGroup" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="History_Checkdate_Result">
+          <Property Type="Int32" Name="Amount" Nullable="true" />
+          <Property Type="Int32" Name="IdStatus" Nullable="false" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -606,6 +624,15 @@
           <FunctionImportMapping FunctionImportName="User_Update_Informatiom_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Informatiom_Normal" />
           <FunctionImportMapping FunctionImportName="User_Update_Password_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Password_Normal" />
           <FunctionImportMapping FunctionImportName="User_Update_Permission" FunctionName="StatusSurveyModel.Store.User_Update_Permission" />
+          <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

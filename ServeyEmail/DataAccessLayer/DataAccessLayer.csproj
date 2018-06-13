@@ -56,6 +56,7 @@
     <Compile Include="BaseDAL\BaseRole.cs" />
     <Compile Include="BaseDAL\BaseStatus.cs" />
     <Compile Include="BaseDAL\BaseUser.cs" />
+    <Compile Include="DAL\Encryptor.cs" />
     <Compile Include="DAL\GroupDAL.cs" />
     <Compile Include="DAL\HistoryDAL.cs" />
     <Compile Include="DAL\RoleDAL.cs" />
@@ -68,6 +69,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\History.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\History_Checkdate_Result.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\History_Select_All_Result.cs">

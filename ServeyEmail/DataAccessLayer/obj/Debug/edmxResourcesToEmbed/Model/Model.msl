@@ -135,5 +135,14 @@
     <FunctionImportMapping FunctionImportName="User_Update_Informatiom_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Informatiom_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Password_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Password_Normal" />
     <FunctionImportMapping FunctionImportName="User_Update_Permission" FunctionName="StatusSurveyModel.Store.User_Update_Permission" />
+    <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
   </EntityContainerMapping>
 </Mapping>
