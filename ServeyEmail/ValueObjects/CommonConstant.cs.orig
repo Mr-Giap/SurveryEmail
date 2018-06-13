@@ -13,6 +13,10 @@ namespace ValueObjects
 <<<<<<< HEAD
         public static string KEY_MD5 = "SENDMAIL";
 =======
+<<<<<<< HEAD
+        public static string KEY_MD5 = "SENDMAIL";
+=======
 >>>>>>> Hue
+>>>>>>> e43ff812b67f5dfdda38e591c89bfdcf982e236e
     }
 }

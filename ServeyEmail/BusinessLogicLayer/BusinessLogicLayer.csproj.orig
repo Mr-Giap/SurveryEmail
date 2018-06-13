@@ -61,19 +61,16 @@
     <Compile Include="BLL\StatusBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
 <<<<<<< HEAD
+=======
     <Compile Include="EncryptCode.cs" />
+>>>>>>> e43ff812b67f5dfdda38e591c89bfdcf982e236e
     <Compile Include="MAHOA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-=======
-    <Compile Include="Class1.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup />
->>>>>>> Hue
   <ItemGroup>
     <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
       <Project>{859cb294-be2b-419a-b1c8-beae9f5e9ee1}</Project>
