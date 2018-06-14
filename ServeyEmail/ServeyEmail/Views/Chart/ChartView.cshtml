@@ -10,7 +10,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
-
     <script src="~/Scripts/jquery-2.1.1.min.js"></script>
     <script type="text/javascript">
         function jsonThongKeTheoStt(handleData) {
@@ -34,17 +33,18 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
         google.load("visualization", "1", { packages: ["corechart"] });
+
         var sttname = [];
         var sttamount = [];
-        var datas;
+      
         function drawChart() {
             // tao Bang
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'name');
             data.addColumn('number', 'amount');
             data.addRows(sttname.length);
-            for (var i = 0; i > sttname.length; i++) {
-                data.setCell(i, 0, sttname[i] + '(' + sttamount[i] + ' )');
+            for (var i = 0; i < sttname.length; i++) {
+                data.setCell(i, 0, name[i] + '(' + sttamount[i] + ' )');
                 data.setCell(i, 1, parseInt(sttamount[i]));
             }
             var options = {
@@ -63,22 +63,17 @@
             google.setOnLoadCallback(drawChart);
         });
 
-
-        
-
-
     </script>
         
-
-
-
-
 </head>
 <body>
+ 
+
+    <h1>Bieu do cam xuc</h1>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
 
 
-
-
+   
 </body>
 
 </html>

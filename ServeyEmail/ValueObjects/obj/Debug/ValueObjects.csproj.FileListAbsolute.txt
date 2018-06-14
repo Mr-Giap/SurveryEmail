@@ -12,4 +12,3 @@ C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\V
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
-C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache

@@ -114,7 +114,7 @@
           <Parameter Name="content" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="History_Checkdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="date" Type="datetime" Mode="In" />
+          <Parameter Name="date" Type="varchar" Mode="In" />
         </Function>
         <Function Name="History_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="idhis" Type="uniqueidentifier" Mode="In" />
@@ -470,7 +470,7 @@
             <Parameter Name="idrole" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
-          <Parameter Name="date" Mode="In" Type="DateTime" />
+          <Parameter Name="date" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
           <Parameter Name="ids" Mode="In" Type="Int32" />

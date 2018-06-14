@@ -12,15 +12,42 @@ namespace ServeyEmail.Controllers
     public class ChartController : Controller
     {
         // GET: Chart
-        public ActionResult ChartView(DateTime date)
-        {                     
+        [HttpGet]
+        public ActionResult ChartView()
+        {
+
             return View();
-        }        
-      
+        }
+        [HttpGet]
+        public ActionResult Getdate()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Getdate(DateTime date)
+        {
+           
+            DateTime datev = new DateTime();
+            //date = DateTime.Parse(Request.Form["date"]).Date;
+            //if (DateTime.TryParse(Convert.ToString(Request.Form["date"]), out date))
+            //{
+            //    //read the Date here
+            //    string strDate = date.ToString("yyyy-MM-dd");
+                
+            //}
+            
+            TempData["date"] = date;
+            TempData.Keep();
+            return RedirectToAction("ChartView");
+        }
+       
+                     
         [HttpGet]
         public JsonResult GetJsondata()
         {
-            DateTime date;//truyen tham số ngày vào để hiển thị biểu đồ.
+            string date;
+             date = (Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd");
+            
             var list = new List<ChartData>();
             HistoryBLL hs = new HistoryBLL();           
             var list1 = hs.Checkdate(date);
@@ -34,5 +61,6 @@ namespace ServeyEmail.Controllers
             }
             return Json(list, JsonRequestBehavior.AllowGet);
         }
+       
     }
 }

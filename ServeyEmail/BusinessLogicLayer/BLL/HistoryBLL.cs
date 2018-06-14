@@ -29,7 +29,7 @@ namespace BusinessLogicLayer.BLL
         {
             return ht.Update(his);
         }
-        public override List<OHistories> Checkdate(DateTime date)
+        public override List<OHistories> Checkdate(string date)
         {
             return ht.Checkdate(date);
         }

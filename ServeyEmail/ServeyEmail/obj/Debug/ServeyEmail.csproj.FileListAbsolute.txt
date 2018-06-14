@@ -121,8 +121,6 @@ A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.csprojResolveA
 A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
 A:\Git\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.csprojResolveAssemblyReference.cache
-C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
-C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\ApplicationInsights.config
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\roslyn\csc.exe
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -162,6 +160,7 @@ C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.W
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.Razor.dll
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\ValueObjects.dll
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\WebGrease.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.dll
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\BusinessLogicLayer.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\ValueObjects.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\EntityFramework.xml
@@ -181,5 +180,6 @@ C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.W
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.Razor.xml
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\Antlr3.Runtime.pdb
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\Newtonsoft.Json.xml
-C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.dll
 C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.pdb
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
+C:\Users\SSSc\Documents\GitHub\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb
