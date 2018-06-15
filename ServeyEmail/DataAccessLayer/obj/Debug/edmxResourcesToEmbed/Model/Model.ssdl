@@ -109,7 +109,7 @@
     <Parameter Name="content" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="History_Checkdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="date" Type="varchar" Mode="In" />
+    <Parameter Name="date" Type="datetime" Mode="In" />
   </Function>
   <Function Name="History_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="idhis" Type="uniqueidentifier" Mode="In" />

@@ -45,8 +45,8 @@ namespace ServeyEmail.Controllers
         [HttpGet]
         public JsonResult GetJsondata()
         {
-            string date;
-             date = (Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd");
+            DateTime date;
+             date = Convert.ToDateTime((Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd"));
             
             var list = new List<ChartData>();
             HistoryBLL hs = new HistoryBLL();           

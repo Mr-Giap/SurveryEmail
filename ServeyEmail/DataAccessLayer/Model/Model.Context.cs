@@ -432,11 +432,11 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("User_Update_Permission", idParameter, idroleParameter);
         }
     
-        public virtual ObjectResult<History_Checkdate_Result> History_Checkdate(string date)
+        public virtual ObjectResult<History_Checkdate_Result> History_Checkdate(Nullable<System.DateTime> date)
         {
-            var dateParameter = date != null ?
+            var dateParameter = date.HasValue ?
                 new ObjectParameter("date", date) :
-                new ObjectParameter("date", typeof(string));
+                new ObjectParameter("date", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<History_Checkdate_Result>("History_Checkdate", dateParameter);
         }

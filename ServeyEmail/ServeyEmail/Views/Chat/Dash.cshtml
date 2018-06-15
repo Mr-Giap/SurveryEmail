@@ -1,0 +1,43 @@
+﻿<html>
+
+<head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    google.load('visualization', '1.0', {'packages':['corechart']})
+    google.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        // Create columns for the DataTable
+        data.addColumn('string','Name');
+        data.addColumn('number', 'Amount');
+        var repArray=@Html.Raw(Json.Encode(ViewBag.AMOUNT));
+        var Names=@Html.Raw(Json.Encode(ViewBag.NAME));
+        data.addRows(repArray.length);
+        for (var i = 0; i < repArray.length; i++) {
+            data.setCell(i, 0, Names[i] + '(' + repArray[i] + ' )');
+            data.setCell(i, 1, parseInt(repArray[i]));
+        }
+        var options = {
+            'title': 'Thống kê số lượng trạng thái',
+            is3D: true
+        };
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);}
+        </script>
+
+
+
+
+
+
+</head>
+
+<body>
+    <div id="chart_div"></div>
+
+
+</body>
+</html>
+

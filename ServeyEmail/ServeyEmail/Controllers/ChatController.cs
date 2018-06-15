@@ -22,45 +22,64 @@ namespace ServeyEmail.Controllers
         [HttpPost]
         public ActionResult Getdate(DateTime date)
         {
-
-            DateTime datev = new DateTime();
-            //date = DateTime.Parse(Request.Form["date"]).Date;
-            //if (DateTime.TryParse(Convert.ToString(Request.Form["date"]), out date))
-            //{
-            //    //read the Date here
-            //    string strDate = date.ToString("yyyy-MM-dd");
-
-            //}
-
             TempData["date"] = date;
             TempData.Keep();
-            return RedirectToAction("Index");
+            return RedirectToAction("Dash");
         }
-        public ActionResult Index()
-        {
-            ArrayList xValue = new ArrayList();
-            ArrayList yValue = new ArrayList();
-            string date;
-            date = (Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd");
+        //public ActionResult Index()
+        //{
+        //    ArrayList xValue = new ArrayList();
+        //    ArrayList yValue = new ArrayList();
+        //    DateTime date;
+        //    date = Convert.ToDateTime((Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd"));
 
             
+        //    HistoryBLL hs = new HistoryBLL();
+        //    var list1 = hs.Checkdate(date);
+        //    foreach (var item in list1)
+        //    {
+        //        xValue.Add(item.Amount);
+        //        StatusBLL st = new StatusBLL();
+        //        string str = (st.Getname(item.IdStatus));
+        //        yValue.Add(str);
+        //    }
+        //    new Chart(width: 600, height: 400, theme: ChartTheme.Green)
+        //        .AddTitle("Chart for Growth[Pie Chart]")
+        //        .AddSeries("Default", chartType: "Pie", xValue: xValue, yValues: yValue)
+        //        .Write("bmp");
+
+        //        return null;
+        //}
+
+        public ActionResult Dash()
+        {
+            DateTime date;
+            date = Convert.ToDateTime((Convert.ToDateTime(TempData["date"])).ToString("yyyy-MM-dd"));
+
+            var list = new List<ChartData>();
             HistoryBLL hs = new HistoryBLL();
             var list1 = hs.Checkdate(date);
             foreach (var item in list1)
             {
-                xValue.Add(item.Amount);
+                ChartData cd = new ChartData();
+                cd.amount = item.Amount;
                 StatusBLL st = new StatusBLL();
-                string str = (st.Getname(item.IdStatus));
-                xValue.Add(str);
+                cd.name = (st.Getname(item.IdStatus));
+                list.Add(cd);
             }
-            new Chart(width: 600, height: 400, theme: ChartTheme.Green)
-                .AddTitle("mmmm")
-                .AddSeries("Default", chartType: "Pie", xValue: xValue, yValues: yValue)
-                .Write("bmp");
+            List<int?> am = new List<int?>();
+            List<string> nm = new List<string>();
+            foreach(var item in list)
+            {
+                am.Add(item.amount);
+                nm.Add(item.name);
+            }
+            var rep = am;
+            ViewBag.AMOUNT = am;
+            ViewBag.NAME = nm;
 
-                return null;
+            return View();
         }
-
 
       
     }

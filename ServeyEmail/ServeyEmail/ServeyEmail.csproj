@@ -215,6 +215,7 @@
     <Content Include="Views\Chart\Getdate.cshtml" />
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Chat\Getdate.cshtml" />
+    <Content Include="Views\Chat\Dash.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -47,7 +47,7 @@ namespace DataAccessLayer.DAL
             db.History_Delete(his.IdHis);
             return true;
         }
-        public override List<OHistories> Checkdate(string date)
+        public override List<OHistories> Checkdate(DateTime date)
         {
             List<OHistories> list = new List<OHistories>();
            var List = db.History_Checkdate(date);

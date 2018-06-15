@@ -51,8 +51,8 @@
                 'title': 'Thống kê số lượng trạng thái',
                 is3D: true
             };
-            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-            chart.draw(data, options);
+            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
            
         }
         jsonThongKeTheoStt(function (data) {
