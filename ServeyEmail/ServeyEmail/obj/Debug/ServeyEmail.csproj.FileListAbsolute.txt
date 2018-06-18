@@ -305,7 +305,6 @@ F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.dll
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.Razor.dll
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\ValueObjects.dll
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\WebGrease.dll
-F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.dll
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\BusinessLogicLayer.pdb
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\ValueObjects.pdb
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\EntityFramework.xml
@@ -325,7 +324,6 @@ F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.Deployment.xml
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\System.Web.WebPages.Razor.xml
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\Antlr3.Runtime.pdb
 F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\Newtonsoft.Json.xml
-F:\SurveryEmail\ServeyEmail\ServeyEmail\bin\DataAccessLayer.pdb
 F:\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.csprojResolveAssemblyReference.cache
 F:\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.dll
 F:\SurveryEmail\ServeyEmail\ServeyEmail\obj\Debug\ServeyEmail.pdb

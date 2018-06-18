@@ -264,17 +264,24 @@
     </FunctionImport>
     <FunctionImport Name="User_getall_by_Sendmail" ReturnType="Collection(StatusSurveyModel.User_getall_by_Sendmail_Result)">
       <Parameter Name="check" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
 =======
     <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
       <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Idg" Mode="In" Type="Guid" />
+>>>>>>> Dong
     </FunctionImport>
     <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
       <Parameter Name="ids" Mode="In" Type="Int32" />
     </FunctionImport>
+<<<<<<< HEAD
     <FunctionImport Name="User_GetName" ReturnType="Collection(String)">
       <Parameter Name="Id" Mode="In" Type="Guid" />
->>>>>>> Hue
     </FunctionImport>
+=======
+>>>>>>> Dong
   </EntityContainer>
   <ComplexType Name="Group_Select_All_Result">
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
@@ -346,6 +353,10 @@
     <Property Type="Int32" Name="IdRole" Nullable="false" />
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
     <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="History_Checkdate_Result">
+    <Property Type="Int32" Name="Amount" Nullable="true" />
+    <Property Type="Int32" Name="IdStatus" Nullable="false" />
   </ComplexType>
   <ComplexType Name="History_Checkdate_Result">
     <Property Type="Int32" Name="Amount" Nullable="true" />

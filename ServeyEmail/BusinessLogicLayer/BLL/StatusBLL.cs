@@ -28,6 +28,10 @@ namespace BusinessLogicLayer.BLL
         {
             return stt.Rename(status);
         }
+        public override string Getname(int status)
+        {
+            return stt.Getname(status);
+        }
 
     }
 }

@@ -37,6 +37,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+<<<<<<< HEAD
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="StatusSurveyModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -48,6 +49,8 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+=======
+>>>>>>> Dong
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="StatusSurveyModel.User">
         <MappingFragment StoreEntitySet="Users">
@@ -109,30 +112,6 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="Role_Update" FunctionName="StatusSurveyModel.Store.Role_Update" />
-    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="StatusSurveyModel.Store.sp_alterdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="StatusSurveyModel.Store.sp_creatediagram" />
-    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="StatusSurveyModel.Store.sp_dropdiagram" />
-    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="StatusSurveyModel.Store.sp_helpdiagramdefinition">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="StatusSurveyModel.sp_helpdiagramdefinition_Result">
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="StatusSurveyModel.Store.sp_helpdiagrams">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="StatusSurveyModel.sp_helpdiagrams_Result">
-          <ScalarProperty Name="Database" ColumnName="Database" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Owner" ColumnName="Owner" />
-          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StatusSurveyModel.Store.sp_renamediagram" />
-    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StatusSurveyModel.Store.sp_upgraddiagrams" />
     <FunctionImportMapping FunctionImportName="Status_Delete" FunctionName="StatusSurveyModel.Store.Status_Delete" />
     <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
     <FunctionImportMapping FunctionImportName="Status_Insert" FunctionName="StatusSurveyModel.Store.Status_Insert" />
@@ -201,6 +180,7 @@
       </ResultMapping>
     </FunctionImportMapping>
 =======
+>>>>>>> Dong
     <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
       <ResultMapping>
         <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
@@ -210,6 +190,5 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
->>>>>>> Hue
   </EntityContainerMapping>
 </Mapping>

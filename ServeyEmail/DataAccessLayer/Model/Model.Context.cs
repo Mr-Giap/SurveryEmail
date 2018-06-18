@@ -27,12 +27,6 @@ namespace DataAccessLayer.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Group> Groups { get; set; }
-        public virtual DbSet<History> Histories { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
-        public virtual DbSet<Status> Status { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<User> Users { get; set; }
     
         public virtual int Group_Delete(Nullable<System.Guid> id)
         {
@@ -82,13 +76,17 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Group_Update", idParameter, nameParameter, contentParameter);
         }
     
-        public virtual ObjectResult<History_Checkdate_Result> History_Checkdate(Nullable<System.DateTime> date)
+        public virtual ObjectResult<History_Checkdate_Result> History_Checkdate(Nullable<System.DateTime> date, Nullable<System.Guid> idg)
         {
             var dateParameter = date.HasValue ?
                 new ObjectParameter("date", date) :
                 new ObjectParameter("date", typeof(System.DateTime));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<History_Checkdate_Result>("History_Checkdate", dateParameter);
+            var idgParameter = idg.HasValue ?
+                new ObjectParameter("Idg", idg) :
+                new ObjectParameter("Idg", typeof(System.Guid));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<History_Checkdate_Result>("History_Checkdate", dateParameter, idgParameter);
         }
     
         public virtual int History_Delete(Nullable<System.Guid> idhis)
@@ -349,6 +347,15 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("User_Delete", idParameter);
         }
     
+        public virtual ObjectResult<User_getall_by_Sendmail_Result> User_getall_by_Sendmail(Nullable<int> check)
+        {
+            var checkParameter = check.HasValue ?
+                new ObjectParameter("check", check) :
+                new ObjectParameter("check", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<User_getall_by_Sendmail_Result>("User_getall_by_Sendmail", checkParameter);
+        }
+    
         public virtual int User_Insert(Nullable<System.Guid> id, string username, string pass, string fullname, string address, string email, string phone, Nullable<int> idrole, Nullable<System.Guid> idgroup)
         {
             var idParameter = id.HasValue ?
@@ -446,33 +453,6 @@ namespace DataAccessLayer.Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("User_Update_Permission", idParameter, idroleParameter);
         }
     
-        public virtual ObjectResult<History_Checkdate_Result> History_Checkdate(Nullable<System.DateTime> date)
-        {
-            var dateParameter = date.HasValue ?
-                new ObjectParameter("date", date) :
-                new ObjectParameter("date", typeof(System.DateTime));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<History_Checkdate_Result>("History_Checkdate", dateParameter);
-        }
-    
-        public virtual ObjectResult<string> Status_Getname(Nullable<int> ids)
-        {
-            var idsParameter = ids.HasValue ?
-                new ObjectParameter("ids", ids) :
-                new ObjectParameter("ids", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("Status_Getname", idsParameter);
-        }
-    
-        public virtual ObjectResult<string> User_GetName(Nullable<System.Guid> id)
-        {
-            var idParameter = id.HasValue ?
-                new ObjectParameter("Id", id) :
-                new ObjectParameter("Id", typeof(System.Guid));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("User_GetName", idParameter);
-        }
-    
         public virtual int User_Update_Sendmail(Nullable<System.Guid> id, Nullable<int> check)
         {
             var idParameter = id.HasValue ?
@@ -484,15 +464,6 @@ namespace DataAccessLayer.Model
                 new ObjectParameter("check", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("User_Update_Sendmail", idParameter, checkParameter);
-        }
-    
-        public virtual ObjectResult<User_getall_by_Sendmail_Result> User_getall_by_Sendmail(Nullable<int> check)
-        {
-            var checkParameter = check.HasValue ?
-                new ObjectParameter("check", check) :
-                new ObjectParameter("check", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<User_getall_by_Sendmail_Result>("User_getall_by_Sendmail", checkParameter);
         }
     }
 }

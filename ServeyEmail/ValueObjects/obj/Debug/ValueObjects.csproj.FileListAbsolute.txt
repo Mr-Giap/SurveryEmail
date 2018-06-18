@@ -17,4 +17,3 @@ C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\Serv
 C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\bin\Debug\ValueObjects.pdb
 C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.dll
 C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.pdb
-C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\obj\Debug\ValueObjects.csprojResolveAssemblyReference.cache

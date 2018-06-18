@@ -1,0 +1,25 @@
+﻿
+
+
+@{
+    ViewBag.Title = "Getdate";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get date</title>
+</head>
+<body>
+    <div>
+        <form action="/Chat/Getdate" method="post">
+            <input name="date" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" />
+            @Html.DropDownList("IdGroup",(IEnumerable<SelectListItem>)ViewBag.ListGroup,new { @class="form-control"})
+            <input type="submit" value="Pick" />
+
+        </form>
+    </div>
+    
+</body>
+</html>
+

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace DataAccessLayer.BaseDAL
 {
@@ -12,5 +13,7 @@ namespace DataAccessLayer.BaseDAL
         public virtual bool Insert(T status) { return false; }
         public virtual bool Rename(T status) { return false; }
         public virtual bool Delete(T status) { return false; }
+        public virtual string Getname(int a) { string b=""; return b; }
     }
+
 }

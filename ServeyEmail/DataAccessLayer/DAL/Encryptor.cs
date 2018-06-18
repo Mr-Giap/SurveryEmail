@@ -29,5 +29,18 @@ namespace DataAccessLayer
 
             return strBuilder.ToString();
         }
+        public static string sha1(string code)
+        {
+            SHA1CryptoServiceProvider sha1 = new SHA1CryptoServiceProvider();
+            byte[] bs = System.Text.Encoding.UTF8.GetBytes(code);
+            bs = sha1.ComputeHash(bs);
+            System.Text.StringBuilder s = new System.Text.StringBuilder();
+            foreach (byte b in bs)
+            {
+                s.Append(b.ToString("x1"));
+            }
+            code = s.ToString();
+            return code;
+        }
     }
 }

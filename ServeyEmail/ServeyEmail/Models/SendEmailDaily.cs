@@ -27,8 +27,8 @@ namespace ServeyEmail.Models
                 users.Updatecheckmail(item,0);  // update trang thái người dùng thành chưa gửi 
                 string ma = ""+item.IdUser;
                 string date = ""+DateTime.Now.Date;
-                string codema = MAHOA.sha1(ma); //mã hóa id
-                string codedate = MAHOA.sha1(date); // mã hóa date
+                string codema = Encrypt.sha1(ma); //mã hóa id
+                string codedate = Encrypt.sha1(date); // mã hóa date
                 //thêm content cho message
                 string content = "<p> Xin chào "+item.FullName+"</p><p> Bạn thấy ngày hôm này như thế nào? </p><p> Vui lòng chọn 1 loại cảm xúc </p>";
                 var st = new StatusBLL().Getall();
@@ -61,7 +61,7 @@ namespace ServeyEmail.Models
         public SmtpClient setupclient()
         {
             var fromEmailAddress = ConfigurationManager.AppSettings["FromEmailAddress"].ToString(); //lấy địa chỉ mail ở web.config
-            var fromEmailPassword = ""; // mật khẩu của maill
+            var fromEmailPassword = "matkhau1995"; // mật khẩu của maill
             var smtpHost = ConfigurationManager.AppSettings["SMTPHost"].ToString(); //cài đặt host
             var smtpPort = ConfigurationManager.AppSettings["SMTPPort"].ToString(); //cài đặt port
             bool enabledSsl = bool.Parse(ConfigurationManager.AppSettings["EnabledSSL"].ToString()); //có bảo mật không

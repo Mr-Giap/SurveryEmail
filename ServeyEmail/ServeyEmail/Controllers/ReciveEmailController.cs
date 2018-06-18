@@ -14,7 +14,7 @@ namespace ServeyEmail.Controllers
         // GET: ReciveEmail
         public ActionResult Index(string code, int number, string date)
         {
-            string ngayht = MAHOA.sha1("" + DateTime.Now.Date);
+            string ngayht = Encrypt.sha1("" + DateTime.Now.Date);
             if (ngayht != date)
             {
                 ViewBag.message = "Đã quá hạn để xác nhận. Xin cảm ơn!";
@@ -33,7 +33,7 @@ namespace ServeyEmail.Controllers
                 {
                     foreach (var item in dsus) //kiểm tra có id nào trùng với id đã gửi về k. nếu có thì gán vào biến user
                     {
-                        string ma = MAHOA.sha1("" + item.IdUser);
+                        string ma = Encrypt.sha1("" + item.IdUser);
                         if (ma == code)
                         {
                             user = item;

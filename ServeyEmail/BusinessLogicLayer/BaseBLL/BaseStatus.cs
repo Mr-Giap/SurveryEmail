@@ -12,5 +12,6 @@ namespace BusinessLogicLayer.BaseBLL
         public virtual bool Insert(T status) { return false; }
         public virtual bool Rename(T status) { return false; }
         public virtual bool Delete(T status) { return false; }
+        public virtual string Getname(int status) { string b = ""; return b; }
     }
 }

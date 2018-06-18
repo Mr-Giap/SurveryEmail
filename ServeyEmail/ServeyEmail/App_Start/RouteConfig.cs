@@ -25,6 +25,12 @@ namespace ServeyEmail
             );
 
             routes.MapRoute(
+                name: "get date Default",
+                url: "{controller}/{action}/{date}",
+                defaults: new { controller = "Home", action = "Index", date = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

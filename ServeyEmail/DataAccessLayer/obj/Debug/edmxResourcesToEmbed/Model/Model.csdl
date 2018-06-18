@@ -1,141 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="StatusSurveyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Group">
-    <Key>
-      <PropertyRef Name="IdGroup" />
-    </Key>
-    <Property Name="IdGroup" Type="Guid" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Contents" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Histories" Relationship="Self.FK_History_Group" FromRole="Group" ToRole="History" />
-    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Group" FromRole="Group" ToRole="Users" />
-  </EntityType>
-  <EntityType Name="History">
-    <Key>
-      <PropertyRef Name="IdHis" />
-    </Key>
-    <Property Name="IdHis" Type="Guid" Nullable="false" />
-    <Property Name="CreationDate" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="IdStatus" Type="Int32" Nullable="false" />
-    <Property Name="IdGroup" Type="Guid" Nullable="false" />
-    <Property Name="Amount" Type="Int32" />
-    <NavigationProperty Name="Group" Relationship="Self.FK_History_Group" FromRole="History" ToRole="Group" />
-    <NavigationProperty Name="Status" Relationship="Self.FK_History_Status" FromRole="History" ToRole="Status" />
-  </EntityType>
-  <EntityType Name="Role">
-    <Key>
-      <PropertyRef Name="IdRole" />
-    </Key>
-    <Property Name="IdRole" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Role" FromRole="Role" ToRole="Users" />
-  </EntityType>
-  <EntityType Name="Status">
-    <Key>
-      <PropertyRef Name="IdStatus" />
-    </Key>
-    <Property Name="IdStatus" Type="Int32" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Histories" Relationship="Self.FK_History_Status" FromRole="Status" ToRole="History" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="User">
-    <Key>
-      <PropertyRef Name="IdUser" />
-    </Key>
-    <Property Name="IdUser" Type="Guid" Nullable="false" />
-    <Property Name="UserName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="FullName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Address" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="IdRole" Type="Int32" Nullable="false" />
-    <Property Name="IdGroup" Type="Guid" Nullable="false" />
-    <Property Name="CheckEmail" Type="Boolean" />
-    <NavigationProperty Name="Group" Relationship="Self.FK_Users_Group" FromRole="Users" ToRole="Group" />
-    <NavigationProperty Name="Role" Relationship="Self.FK_Users_Role" FromRole="Users" ToRole="Role" />
-  </EntityType>
-  <Association Name="FK_History_Group">
-    <End Role="Group" Type="Self.Group" Multiplicity="1" />
-    <End Role="History" Type="Self.History" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Group">
-        <PropertyRef Name="IdGroup" />
-      </Principal>
-      <Dependent Role="History">
-        <PropertyRef Name="IdGroup" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Users_Group">
-    <End Role="Group" Type="Self.Group" Multiplicity="1" />
-    <End Role="Users" Type="Self.User" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Group">
-        <PropertyRef Name="IdGroup" />
-      </Principal>
-      <Dependent Role="Users">
-        <PropertyRef Name="IdGroup" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_History_Status">
-    <End Role="Status" Type="Self.Status" Multiplicity="1" />
-    <End Role="History" Type="Self.History" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Status">
-        <PropertyRef Name="IdStatus" />
-      </Principal>
-      <Dependent Role="History">
-        <PropertyRef Name="IdStatus" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Users_Role">
-    <End Role="Role" Type="Self.Role" Multiplicity="1" />
-    <End Role="Users" Type="Self.User" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Role">
-        <PropertyRef Name="IdRole" />
-      </Principal>
-      <Dependent Role="Users">
-        <PropertyRef Name="IdRole" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="StatusSurveyEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Groups" EntityType="Self.Group" />
-    <EntitySet Name="Histories" EntityType="Self.History" />
-    <EntitySet Name="Roles" EntityType="Self.Role" />
-    <EntitySet Name="Status" EntityType="Self.Status" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK_History_Group" Association="Self.FK_History_Group">
-      <End Role="Group" EntitySet="Groups" />
-      <End Role="History" EntitySet="Histories" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Users_Group" Association="Self.FK_Users_Group">
-      <End Role="Group" EntitySet="Groups" />
-      <End Role="Users" EntitySet="Users" />
-    </AssociationSet>
-    <AssociationSet Name="FK_History_Status" Association="Self.FK_History_Status">
-      <End Role="Status" EntitySet="Status" />
-      <End Role="History" EntitySet="Histories" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Users_Role" Association="Self.FK_Users_Role">
-      <End Role="Role" EntitySet="Roles" />
-      <End Role="Users" EntitySet="Users" />
-    </AssociationSet>
     <FunctionImport Name="Group_Delete">
       <Parameter Name="id" Mode="In" Type="Guid" />
     </FunctionImport>
@@ -152,6 +17,7 @@
     </FunctionImport>
     <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
       <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Idg" Mode="In" Type="Guid" />
     </FunctionImport>
     <FunctionImport Name="History_Delete">
       <Parameter Name="idhis" Mode="In" Type="Guid" />
@@ -230,6 +96,9 @@
     <FunctionImport Name="User_Delete">
       <Parameter Name="Id" Mode="In" Type="Guid" />
     </FunctionImport>
+    <FunctionImport Name="User_getall_by_Sendmail" ReturnType="Collection(StatusSurveyModel.User_getall_by_Sendmail_Result)">
+      <Parameter Name="check" Mode="In" Type="Int32" />
+    </FunctionImport>
     <FunctionImport Name="User_Insert">
       <Parameter Name="Id" Mode="In" Type="Guid" />
       <Parameter Name="username" Mode="In" Type="String" />
@@ -260,18 +129,6 @@
     <FunctionImport Name="User_Update_Sendmail">
       <Parameter Name="id" Mode="In" Type="Guid" />
       <Parameter Name="check" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="User_getall_by_Sendmail" ReturnType="Collection(StatusSurveyModel.User_getall_by_Sendmail_Result)">
-      <Parameter Name="check" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
-      <Parameter Name="date" Mode="In" Type="DateTime" />
-    </FunctionImport>
-    <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
-      <Parameter Name="ids" Mode="In" Type="Int32" />
-    </FunctionImport>
-    <FunctionImport Name="User_GetName" ReturnType="Collection(String)">
-      <Parameter Name="Id" Mode="In" Type="Guid" />
     </FunctionImport>
   </EntityContainer>
   <ComplexType Name="Group_Select_All_Result">
@@ -321,18 +178,6 @@
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
     <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
   </ComplexType>
-  <ComplexType Name="User_Select_All_Result">
-    <Property Type="Guid" Name="IdUser" Nullable="false" />
-    <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
-    <Property Type="String" Name="Password" Nullable="false" MaxLength="250" />
-    <Property Type="String" Name="FullName" Nullable="true" MaxLength="250" />
-    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
-    <Property Type="String" Name="Email" Nullable="false" MaxLength="250" />
-    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
-    <Property Type="Int32" Name="IdRole" Nullable="false" />
-    <Property Type="Guid" Name="IdGroup" Nullable="false" />
-    <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
-  </ComplexType>
   <ComplexType Name="User_getall_by_Sendmail_Result">
     <Property Type="Guid" Name="IdUser" Nullable="false" />
     <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
@@ -345,8 +190,16 @@
     <Property Type="Guid" Name="IdGroup" Nullable="false" />
     <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
   </ComplexType>
-  <ComplexType Name="History_Checkdate_Result">
-    <Property Type="Int32" Name="Amount" Nullable="true" />
-    <Property Type="Int32" Name="IdStatus" Nullable="false" />
+  <ComplexType Name="User_Select_All_Result">
+    <Property Type="Guid" Name="IdUser" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdRole" Nullable="false" />
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
   </ComplexType>
 </Schema>
