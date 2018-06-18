@@ -47,7 +47,7 @@ namespace DataAccessLayer.DAL
         public override string Getname(int idstatus)
         {
             string t;
-            t = db.Status_Getname(idstatus).ToString();
+            t = db.Status_Getname(idstatus).FirstOrDefault().ToString();
             return t;
         }
     }

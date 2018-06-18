@@ -159,7 +159,6 @@
     <Compile Include="Areas\AdminCP\AdminCPAreaRegistration.cs" />
     <Compile Include="ChartData.cs" />
     <Compile Include="Controllers\BaseController.cs" />
-    <Compile Include="Controllers\ChartController.cs" />
     <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,8 +210,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Chart\ChartView.cshtml" />
-    <Content Include="Views\Chart\Getdate.cshtml" />
     <Content Include="Views\Chat\Index.cshtml" />
     <Content Include="Views\Chat\Getdate.cshtml" />
     <Content Include="Views\Chat\Dash.cshtml" />

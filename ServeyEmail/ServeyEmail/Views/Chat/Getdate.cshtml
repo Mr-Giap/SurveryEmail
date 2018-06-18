@@ -14,9 +14,12 @@
     <div>
         <form action="/Chat/Getdate" method="post">
             <input name="date" type="date" @*value="DateTime.Now.Date"*@ />
+            @Html.DropDownList("IdGroup",(IEnumerable<SelectListItem>)ViewBag.ListGroup,new { @class="form-control"})
             <input type="submit" value="Pick" />
+
         </form>
     </div>
+    
 </body>
 </html>
 

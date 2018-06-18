@@ -253,6 +253,7 @@
     </FunctionImport>
     <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
       <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Idg" Mode="In" Type="Guid" />
     </FunctionImport>
     <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
       <Parameter Name="ids" Mode="In" Type="Int32" />
