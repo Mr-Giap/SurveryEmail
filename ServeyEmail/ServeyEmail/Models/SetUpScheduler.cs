@@ -29,7 +29,7 @@ namespace ServeyEmail.Models
 
                     .OnEveryDay() // vào mỗi ngày
 
-                    .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(16,00)) //bắt đầu lúc 16:00
+                    .StartingDailyAt(TimeOfDay.HourAndMinuteOfDay(12,35)) //bắt đầu lúc 16:00
 
                   )
 
