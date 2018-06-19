@@ -64,7 +64,7 @@ namespace ServeyEmail.Models
         public SmtpClient setupclient()
         {
             var fromEmailAddress = ConfigurationManager.AppSettings["FromEmailAddress"].ToString(); //lấy địa chỉ mail ở web.config
-            var fromEmailPassword = "matkhau1995"; // mật khẩu của maill
+            var fromEmailPassword = ""; // mật khẩu của maill
             var smtpHost = ConfigurationManager.AppSettings["SMTPHost"].ToString(); //cài đặt host
             var smtpPort = ConfigurationManager.AppSettings["SMTPPort"].ToString(); //cài đặt port
             bool enabledSsl = bool.Parse(ConfigurationManager.AppSettings["EnabledSSL"].ToString()); //có bảo mật không
