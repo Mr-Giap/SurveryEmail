@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StatusSurveyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="StatusSurveyEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="Group_Delete">
+      <Parameter Name="id" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="Group_Insert">
+      <Parameter Name="id" Mode="In" Type="Guid" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="content" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Group_Select_All" ReturnType="Collection(StatusSurveyModel.Group_Select_All_Result)" />
+    <FunctionImport Name="Group_Update">
+      <Parameter Name="id" Mode="In" Type="Guid" />
+      <Parameter Name="name" Mode="In" Type="String" />
+      <Parameter Name="content" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="History_Checkdate" ReturnType="Collection(StatusSurveyModel.History_Checkdate_Result)">
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="Idg" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="History_Delete">
+      <Parameter Name="idhis" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="History_Insert">
+      <Parameter Name="idhis" Mode="In" Type="Guid" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+      <Parameter Name="idstatus" Mode="In" Type="Int32" />
+      <Parameter Name="idgroup" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="History_Select_All" ReturnType="Collection(StatusSurveyModel.History_Select_All_Result)" />
+    <FunctionImport Name="History_Update">
+      <Parameter Name="idhis" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="Role_Delete">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Role_Insert">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Role_Select_All" ReturnType="Collection(StatusSurveyModel.Role_Select_All_Result)" />
+    <FunctionImport Name="Role_Update">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(StatusSurveyModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(StatusSurveyModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="Status_Delete">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Status_Getname" ReturnType="Collection(String)">
+      <Parameter Name="ids" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Status_Insert">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Status_Rename">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Status_Select_All" ReturnType="Collection(StatusSurveyModel.Status_Select_All_Result)" />
+    <FunctionImport Name="User_Checklogin" ReturnType="Collection(StatusSurveyModel.User_Checklogin_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="password" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="User_Delete">
+      <Parameter Name="Id" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="User_getall_by_Sendmail" ReturnType="Collection(StatusSurveyModel.User_getall_by_Sendmail_Result)">
+      <Parameter Name="check" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="User_Insert">
+      <Parameter Name="Id" Mode="In" Type="Guid" />
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+      <Parameter Name="fullname" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+      <Parameter Name="idrole" Mode="In" Type="Int32" />
+      <Parameter Name="idgroup" Mode="In" Type="Guid" />
+    </FunctionImport>
+    <FunctionImport Name="User_Select_All" ReturnType="Collection(StatusSurveyModel.User_Select_All_Result)" />
+    <FunctionImport Name="User_Update_Informatiom_Normal">
+      <Parameter Name="Id" Mode="In" Type="Guid" />
+      <Parameter Name="fullname" Mode="In" Type="String" />
+      <Parameter Name="address" Mode="In" Type="String" />
+      <Parameter Name="email" Mode="In" Type="String" />
+      <Parameter Name="phone" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="User_Update_Password_Normal">
+      <Parameter Name="Id" Mode="In" Type="Guid" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="User_Update_Permission">
+      <Parameter Name="Id" Mode="In" Type="Guid" />
+      <Parameter Name="idrole" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="User_Update_Sendmail">
+      <Parameter Name="id" Mode="In" Type="Guid" />
+      <Parameter Name="check" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="Group_Select_All_Result">
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Contents" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <ComplexType Name="History_Checkdate_Result">
+    <Property Type="Int32" Name="Amount" Nullable="true" />
+    <Property Type="Int32" Name="IdStatus" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="History_Select_All_Result">
+    <Property Type="Guid" Name="IdHis" Nullable="false" />
+    <Property Type="DateTime" Name="CreationDate" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="IdStatus" Nullable="false" />
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="Int32" Name="Amount" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Role_Select_All_Result">
+    <Property Type="Int32" Name="IdRole" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="Status_Select_All_Result">
+    <Property Type="Int32" Name="IdStatus" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="User_Checklogin_Result">
+    <Property Type="Guid" Name="IdUser" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdRole" Nullable="false" />
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="User_getall_by_Sendmail_Result">
+    <Property Type="Guid" Name="IdUser" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdRole" Nullable="false" />
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="User_Select_All_Result">
+    <Property Type="Guid" Name="IdUser" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="FullName" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Address" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="250" />
+    <Property Type="String" Name="Phone" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="IdRole" Nullable="false" />
+    <Property Type="Guid" Name="IdGroup" Nullable="false" />
+    <Property Type="Boolean" Name="CheckEmail" Nullable="true" />
+  </ComplexType>
+</Schema>

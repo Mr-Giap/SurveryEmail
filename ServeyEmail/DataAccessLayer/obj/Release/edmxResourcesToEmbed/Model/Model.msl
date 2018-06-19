@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StatusSurveyModelStoreContainer" CdmEntityContainer="StatusSurveyEntities">
+    <FunctionImportMapping FunctionImportName="Group_Delete" FunctionName="StatusSurveyModel.Store.Group_Delete" />
+    <FunctionImportMapping FunctionImportName="Group_Insert" FunctionName="StatusSurveyModel.Store.Group_Insert" />
+    <FunctionImportMapping FunctionImportName="Group_Select_All" FunctionName="StatusSurveyModel.Store.Group_Select_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.Group_Select_All_Result">
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Contents" ColumnName="Contents" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Group_Update" FunctionName="StatusSurveyModel.Store.Group_Update" />
+    <FunctionImportMapping FunctionImportName="History_Checkdate" FunctionName="StatusSurveyModel.Store.History_Checkdate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.History_Checkdate_Result">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="History_Delete" FunctionName="StatusSurveyModel.Store.History_Delete" />
+    <FunctionImportMapping FunctionImportName="History_Insert" FunctionName="StatusSurveyModel.Store.History_Insert" />
+    <FunctionImportMapping FunctionImportName="History_Select_All" FunctionName="StatusSurveyModel.Store.History_Select_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.History_Select_All_Result">
+          <ScalarProperty Name="IdHis" ColumnName="IdHis" />
+          <ScalarProperty Name="CreationDate" ColumnName="CreationDate" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="History_Update" FunctionName="StatusSurveyModel.Store.History_Update" />
+    <FunctionImportMapping FunctionImportName="Role_Delete" FunctionName="StatusSurveyModel.Store.Role_Delete" />
+    <FunctionImportMapping FunctionImportName="Role_Insert" FunctionName="StatusSurveyModel.Store.Role_Insert" />
+    <FunctionImportMapping FunctionImportName="Role_Select_All" FunctionName="StatusSurveyModel.Store.Role_Select_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.Role_Select_All_Result">
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Role_Update" FunctionName="StatusSurveyModel.Store.Role_Update" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="StatusSurveyModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="StatusSurveyModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="StatusSurveyModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="StatusSurveyModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="StatusSurveyModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="StatusSurveyModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="StatusSurveyModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="Status_Delete" FunctionName="StatusSurveyModel.Store.Status_Delete" />
+    <FunctionImportMapping FunctionImportName="Status_Getname" FunctionName="StatusSurveyModel.Store.Status_Getname" />
+    <FunctionImportMapping FunctionImportName="Status_Insert" FunctionName="StatusSurveyModel.Store.Status_Insert" />
+    <FunctionImportMapping FunctionImportName="Status_Rename" FunctionName="StatusSurveyModel.Store.Status_Rename" />
+    <FunctionImportMapping FunctionImportName="Status_Select_All" FunctionName="StatusSurveyModel.Store.Status_Select_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.Status_Select_All_Result">
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="User_Checklogin" FunctionName="StatusSurveyModel.Store.User_Checklogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.User_Checklogin_Result">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="User_Delete" FunctionName="StatusSurveyModel.Store.User_Delete" />
+    <FunctionImportMapping FunctionImportName="User_getall_by_Sendmail" FunctionName="StatusSurveyModel.Store.User_getall_by_Sendmail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.User_getall_by_Sendmail_Result">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="User_Insert" FunctionName="StatusSurveyModel.Store.User_Insert" />
+    <FunctionImportMapping FunctionImportName="User_Select_All" FunctionName="StatusSurveyModel.Store.User_Select_All">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StatusSurveyModel.User_Select_All_Result">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="IdGroup" ColumnName="IdGroup" />
+          <ScalarProperty Name="CheckEmail" ColumnName="CheckEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="User_Update_Informatiom_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Informatiom_Normal" />
+    <FunctionImportMapping FunctionImportName="User_Update_Password_Normal" FunctionName="StatusSurveyModel.Store.User_Update_Password_Normal" />
+    <FunctionImportMapping FunctionImportName="User_Update_Permission" FunctionName="StatusSurveyModel.Store.User_Update_Permission" />
+    <FunctionImportMapping FunctionImportName="User_Update_Sendmail" FunctionName="StatusSurveyModel.Store.User_Update_Sendmail" />
+  </EntityContainerMapping>
+</Mapping>

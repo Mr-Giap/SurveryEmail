@@ -1,0 +1,4 @@
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\bin\Release\ValueObjects.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\bin\Release\ValueObjects.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\obj\Release\ValueObjects.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\ValueObjects\obj\Release\ValueObjects.pdb

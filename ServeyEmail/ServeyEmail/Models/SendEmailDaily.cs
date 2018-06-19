@@ -18,30 +18,33 @@ namespace ServeyEmail.Models
         public void Execute(IJobExecutionContext context)
 
         {
-            UserBLL users = new UserBLL();
-            var us = users.GetallUsers(); //lấy tất cả user
-            
-            foreach (var item in us)
+            string dayofweek = DateTime.Now.DayOfWeek.ToString();
+            if (dayofweek != "Sunday" || dayofweek != "Saturday")
             {
-                item.Checkmail = false; // trang thái về chưa gửi
-                users.Updatecheckmail(item,0);  // update trang thái người dùng thành chưa gửi 
-                string ma = ""+item.IdUser;
-                string date = ""+DateTime.Now.Date;
-                string codema = Encrypt.sha1(ma); //mã hóa id
-                string codedate = Encrypt.sha1(date); // mã hóa date
-                //thêm content cho message
-                string content = "<p> Xin chào "+item.FullName+"</p><p> Bạn thấy ngày hôm này như thế nào? </p><p> Vui lòng chọn 1 loại cảm xúc </p>";
-                var st = new StatusBLL().Getall();
-                foreach (var i in st)
-                {
-                    content += "<a href = \"http://localhost:53676/ReciveEmail/" + codema + "/" +i.IdStatus+"/" + codedate + "\">"+i.Name+"</a><br />";
-                }
-                //thêm message
-                MailMessage mes = setupmessage(content, "Hello", item.Email);
-                var client = setupclient();
-                sendmail(client, mes); // gọi hàm send
-            }
+                UserBLL users = new UserBLL();
+                var us = users.GetallUsers(); //lấy tất cả user
 
+                foreach (var item in us)
+                {
+                    item.Checkmail = false; // trang thái về chưa gửi
+                    users.Updatecheckmail(item, 0);  // update trang thái người dùng thành chưa gửi 
+                    string ma = "" + item.IdUser;
+                    string date = "" + DateTime.Now.Date;
+                    string codema = Encrypt.sha1(ma); //mã hóa id
+                    string codedate = Encrypt.sha1(date); // mã hóa date
+                                                          //thêm content cho message
+                    string content = "<p> Xin chào " + item.FullName + "</p><p> Bạn thấy ngày hôm này như thế nào? </p><p> Vui lòng chọn 1 loại cảm xúc </p>";
+                    var st = new StatusBLL().Getall();
+                    foreach (var i in st)
+                    {
+                        content += "<a href = \"http://pcmarket.somee.com/ReciveEmail/" + codema + "/" + i.IdStatus + "/" + codedate + "\">" + i.Name + "</a><br />";
+                    }
+                    //thêm message
+                    MailMessage mes = setupmessage(content, "Hello", item.Email);
+                    var client = setupclient();
+                    sendmail(client, mes); // gọi hàm send
+                }
+            }
         }
         public void sendmail(SmtpClient client, MailMessage message)
         {

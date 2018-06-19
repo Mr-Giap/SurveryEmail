@@ -1,0 +1,12 @@
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\DataAccessLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\EntityFramework.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\ValueObjects.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\ValueObjects.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\EntityFramework.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Release\DataAccessLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\DataAccessLayer\obj\Release\DataAccessLayer.pdb

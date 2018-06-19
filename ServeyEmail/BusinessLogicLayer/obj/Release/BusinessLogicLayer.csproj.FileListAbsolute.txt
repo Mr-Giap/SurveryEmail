@@ -1,0 +1,17 @@
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\BusinessLogicLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\BusinessLogicLayer.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.Core.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\DataAccessLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\ValueObjects.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\EntityFramework.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\DataAccessLayer.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\ValueObjects.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.Core.pdb
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\Common.Logging.Core.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\bin\Release\EntityFramework.xml
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Release\BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Release\BusinessLogicLayer.dll
+C:\Users\shj\Downloads\startbootstrap-sb-admin-2-gh-pages\adad\SurveryEmail\ServeyEmail\BusinessLogicLayer\obj\Release\BusinessLogicLayer.pdb
